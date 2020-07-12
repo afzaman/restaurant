@@ -1,4 +1,5 @@
 const locations = () => {
+    console.log("I have been called and my name is LOCATIONS");
     //Cache the DOM sections
     //Create the Eelements
     //Add Content to the Elements
@@ -9,4 +10,4 @@ const locations = () => {
     //Append to the Content DIV
 }
 
-export default { locations };
+export default locations;
