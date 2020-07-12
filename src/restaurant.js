@@ -1,7 +1,10 @@
-var container = document.getElementById("content");
-var title = document.createElement("div");
-title.innerHTML("This Restaurant");
-title.appendChild(container);
-var img = document.createElement("img");
-img.source = "https://bakingamoment.com/wp-content/uploads/2020/03/IMG_7844-chocolate-babka.jpg";
-img.appendChild(container);
+const initialPageLoad = () => {
+    const container = document.getElementById("content");
+    const title = document.createElement("div");
+    title.innerText = "This Restaurant";
+    container.appendChild(title);
+    const img = document.createElement("img");
+    img.src = "https://bakingamoment.com/wp-content/uploads/2020/03/IMG_7844-chocolate-babka.jpg";
+    container.appendChild(img);
+}
+export default initialPageLoad
