@@ -1,5 +1,10 @@
 const contact = () => {
-    console.log("I have been called and my name is CONTACT");
+    let body = document.querySelector("body")
+    let content = document.querySelector("#content");
+    let oldMain = document.querySelector("#mainContent")
+    if (oldMain){
+        content.removeChild(oldMain);
+    }
     //Cache the DOM sections
     //Create the Eelements
     //Add Content to the Elements

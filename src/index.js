@@ -1,7 +1,6 @@
 import menu from './menu'
 import contact from './contact'
 import locations from './locations'
-import careers from './careers'
 
 window.onload = menu();
 
@@ -21,7 +20,6 @@ navbar.forEach(navLink => {
         if (e.path[0].id == "menu") {menu()};
         if (e.path[0].id == "contact") {contact()};
         if (e.path[0].id == "locations") {locations()};
-        if (e.path[0].id == "careers") {careers()};
     });
 });
 
