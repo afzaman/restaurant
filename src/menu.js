@@ -1,11 +1,7 @@
 const menu = () => {
     //Cache the DOM sections
-    let body = document.querySelector("body")
     let content = document.querySelector("#content");
-    let oldMain = document.querySelector("#mainContent")
-    if (oldMain){
-        content.removeChild(oldMain);
-    }
+    content.innerHTML = "";
 
     // creating Elements
     let mainContent = document.createElement("div");
@@ -25,7 +21,7 @@ const menu = () => {
     let menu3img = document.createElement("img");
 
     let footer = document.createElement("footer");
-// adding content to each element
+    // adding content to each element
         // headings
         menu1name.textContent = `POLEBURGER - Å 10.00`;
         menu2name.textContent = `PENGUIN CLUB - Å 7.00`;
@@ -42,23 +38,19 @@ const menu = () => {
         menu3img.src = "./img/COD ICEFISH FILLET.jpg"
 
         //classes & styles
-        menu1box.classList.add("card" , "text-white", "bg-secondary", "m-3");
+        menu1box.classList.add("card" , "text-white", "bg-secondary", "mb-3", "menu-box");
         menu1name.classList.add("card-title", "mb-3");
         menu1desc.classList.add("card-text");
-        menu2box.classList.add("card" , "text-white", "bg-secondary", "m-3");
+        menu2box.classList.add("card" , "text-white", "bg-secondary", "mb-3", "menu-box");
         menu2name.classList.add("card-title", "mb-3");
         menu2desc.classList.add("card-text");
-        menu3box.classList.add("card" , "text-white", "bg-secondary", "m-3");
+        menu3box.classList.add("card" , "text-white", "bg-secondary", "mb-3", "menu-box");
         menu3name.classList.add("card-title", "mb-3");
         menu3desc.classList.add("card-text");
-
-        menu1img.style.width = "100%";
-        menu2img.style.width = "100%";
-        menu3img.style.width = "100%";
-
-        menu1box.style.maxWidth = "600px";
-        menu2box.style.maxWidth = "600px";
-        menu3box.style.maxWidth = "600px";
+        
+        menu1img.classList.add("menu-images")
+        menu2img.classList.add("menu-images")
+        menu3img.classList.add("menu-images")
 
     // appending each element to the section
     section.appendChild(menu1box);
@@ -80,5 +72,6 @@ const menu = () => {
     mainContent.id = "mainContent";
     mainContent.style.display = "block";
     content.appendChild(mainContent);
+
 }
 export default menu;
